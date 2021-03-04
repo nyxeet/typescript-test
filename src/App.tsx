@@ -1,25 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+let a: number | null = 10;
+
+a = null;
+
+let names: Array<string> = ['1', '2', '3']
+type adressType = {
+  city: string | null
+  index: number | null
+}
+type objTypes = {
+  name: string | null
+  age: number | null
+  adress: adressType | null
+
+}
+const obj = {
+  name: "dima",
+  age: 12,
+  adress: {
+    city: 'kiyv',
+    index: 12345,
+  }
+}
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="App"></div>
   );
 }
 
